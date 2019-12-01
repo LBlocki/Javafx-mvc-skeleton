@@ -1,5 +1,5 @@
 # Javafx-mvc-skeleton
-This is my skeleton project that you can use to develop you javaFX application.  
+This is my skeleton project that you can use to develop your javaFX application.  
 I created it mainly for beginners so below you can check out quick guide to start developing and learning.  
 It is maven based making running, testing, packaging and producing all sort of stuff simple and intuitive.
 
@@ -30,7 +30,7 @@ Almost everything is ready. Now you just need to rename some of the properties t
   <groupId>com.yoursurname</groupId>
   <artifactId>yourappname</artifactId>
    ``` 
-Fell free to modify it but make sure that is matches with ( src->main->java->com.yoursurname.yourappname ).  
+Feel free to modify it but make sure that is matches with ( src->main->java->com.yoursurname.yourappname ).  
   ```bash
   <mainClass>com.yoursurname.yourappname.YourAppNameStarter</mainClass>
    ``` 
@@ -85,5 +85,6 @@ Also make sure that this reference is placed in the root element of your file - 
 another main controller may lead to some unexpected results.
  * Try using Singletons for classes that hold state of the game etc. If you have multiple controllers
  having always only one instance of a class can make your life much easier.
-   
+ * For creating view I recommend using SceneBuilder. If you are using Intellij as your IDE checkout this to help you get started:
+ https://www.jetbrains.com/help/idea/javafx.html
 ### That's it. If you found this project useful you can click the star next to repository name. It helps to boost this project in rankings. Thanks :)
