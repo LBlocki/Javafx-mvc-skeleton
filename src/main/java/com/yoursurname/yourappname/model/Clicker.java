@@ -1,19 +1,21 @@
 package com.yoursurname.yourappname.model;
 
-import lombok.Getter;
-
 public class Clicker
 {
-    @Getter
     private Integer amountOfClicks = 0;
 
     private static Clicker instance = null;
 
-    private Clicker() {}    // Disabling or getInstance method
+    private Clicker() {}    // Disabling for getInstance method
 
     public void increaseAmountOfClicks(int increaseNumber)
     {
         amountOfClicks += increaseNumber;
+    }
+
+    public Integer getAmountOfClicks()
+    {
+        return amountOfClicks;
     }
 
     /**

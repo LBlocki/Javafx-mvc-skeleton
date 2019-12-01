@@ -29,14 +29,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>13</version>
         </dependency>
-        <!-- Lombok is for auto generating code ( getters, setters etc. ) If you wish to write them
-        yourself then just delete this dependency and remove path from annotationProcessorPaths below -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -56,16 +48,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
-                <configuration>
-                    <annotationProcessorPaths>
-                        <!-- This is the path mentioned above -->
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>1.18.2</version>
-                        </path>
-                    </annotationProcessorPaths>
-                </configuration>
             </plugin>
             <plugin>
                 <!-- This is maven plugin for packaging your app into a single jar file ( fatty fatty fatty ) -->
