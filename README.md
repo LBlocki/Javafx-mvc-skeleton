@@ -20,8 +20,8 @@ Git will create directory containing this repository
 
 ### 2. Install Java JDK and Maven
 Before running you have to install both. You should also add them to the PATH.  
-* [Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* [Maven](https://maven.apache.org/)
+* [Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html) - you need at least JDK 13
+* [Maven](https://maven.apache.org/) - you need at least Apache Maven 3.3.9
 
 ### 3. Configure project
 Almost everything is ready. Now you just need to rename some of the properties to match your needs.  
@@ -32,12 +32,12 @@ Almost everything is ready. Now you just need to rename some of the properties t
    ``` 
 Fell free to modify it but make sure that is matches with ( src->main->java->com.yoursurname.yourappname ).  
   ```bash
-` <mainClass>com.yoursurname.yourappname.YourAppNameStarter</mainClass>
+  <mainClass>com.yoursurname.yourappname.YourAppNameStarter</mainClass>
    ``` 
 There are a few of these in pom file. Make sure they match the proper path to starter class when you change package names.
 #### src/main/resources/META-INF
   ```bash
-` Main-Class: com.yoursurname.yourappname.YourAppName
+  Main-Class: com.yoursurname.yourappname.YourAppName
    ``` 
 Just like before. Make sure it matches.
 #### YourAppName and YourAppNameStarter
@@ -61,11 +61,20 @@ Of course you can link it all in a nice single command:
    ```bash
    mvn clean package javafx:run
    ```
+If you created unit tests you can test your app like this:
+   ```bash
+   mvn test
+   ```
+For integration tests you can use: 
+   ```bash
+   mvn verify
+   ```
 You can create JavaDoc by excecuting:
    ```bash
    mvn javadoc:javadoc -Dshow=private
    ```
-Maven will generate documentation that you can find under target/site/apidocs/index.html
+Maven will generate documentation that you can find under target/site/apidocs/index.html  
+
 ### 4. Few tips that can help you develop
  * Always create link in between fxml file and controller inside fxml for example :    fx:controller="com.yoursurname.yourappname.controllers.ExampleController"  
 Also make sure that this reference is placed in the root element of your file - here it is AnchorPane  
